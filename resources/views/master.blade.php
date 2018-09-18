@@ -78,9 +78,7 @@
       <div class="userinfo">
         <div class="user">
           <ul>
-            <li><a href="login"><img src="images/user-pic.png" title="user-name" /><span>Login</span></a>
-              <a href="register" title="user-name"><span>Register</span></a>
-            </li>
+            <li><a href="#"><img src="images/user-pic.png" title="user-name" /><span>@yield('user')</span></a></li>
           </ul>
         </div>
       </div>
