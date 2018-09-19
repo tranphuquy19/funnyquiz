@@ -22,6 +22,9 @@ class Quiz extends Migration
             $table->json('list_comments');
             $table->string('author');
             $table->dateTime('created_at');
+
+            $table->foreign('id_tag')->references('id')->on('tags');
+            $table->foreign('author')->references('id')->on('users');
             $table->timestamps();
         });
     }
