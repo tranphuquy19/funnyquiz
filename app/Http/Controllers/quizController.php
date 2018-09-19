@@ -14,8 +14,8 @@ class quizController extends Controller
 
 	}
 	public function showQuiz(){
-		//$title = 'Funny Quiz';
+		$title = 'ahaha';
 		$tableQuiz = array(['idQuiz'=>'1', 'idImageQuiz' => 'img1.jpg', 'heightImage'=> '118', 'titleQuiz' => 'Kiểm tra định kỳ', 'tagQuiz' => 'math', 'description' => 'Mô tả về kiểm tra định kỳ môn toán cao cấp'], ['idQuiz'=>'1', 'idImageQuiz' => 'img1.jpg', 'heightImage'=> '118', 'titleQuiz' => 'Kiểm tra định kỳ', 'tagQuiz' => 'math', 'description' => 'Mô tả về kiểm tra định kỳ môn toán cao cấp'],['idQuiz'=>'1', 'idImageQuiz' => 'img1.jpg', 'heightImage'=> '118', 'titleQuiz' => 'Kiểm tra định kỳ', 'tagQuiz' => 'math', 'description' => 'Mô tả về kiểm tra định kỳ môn toán cao cấp'], ['idQuiz'=>'1', 'idImageQuiz' => 'img1.jpg', 'heightImage'=> '118', 'titleQuiz' => 'Kiểm tra định kỳ', 'tagQuiz' => 'math', 'description' => 'Mô tả về kiểm tra định kỳ môn toán cao cấp'],['idQuiz'=>'1', 'idImageQuiz' => 'img1.jpg', 'heightImage'=> '118', 'titleQuiz' => 'Kiểm tra định kỳ', 'tagQuiz' => 'math', 'description' => 'Mô tả về kiểm tra định kỳ môn toán cao cấp'], ['idQuiz'=>'1', 'idImageQuiz' => 'img1.jpg', 'heightImage'=> '118', 'titleQuiz' => 'Kiểm tra định kỳ', 'tagQuiz' => 'math', 'description' => 'Mô tả về kiểm tra định kỳ môn toán cao cấp']);
-		return view('layouts.quiz')->with(compact('tableQuiz'));
+		return view('layouts.quiz', compact('tableQuiz', 'title'));
 	}
 }

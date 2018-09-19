@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', 'Funny Quiz')
+@section('title', $title)
 @section('quiz')
 @foreach($tableQuiz as $quiz)
 @if($loop->first)
