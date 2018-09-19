@@ -16,6 +16,7 @@ class Downloads extends Migration
         Schema::create('downloads', function (Blueprint $table) {
             $table->increments('id');
             $table->mediumText('title');
+            $table->string('description');
             $table->string('link_file');
             $table->integer('id_tag');
             $table->string('image');

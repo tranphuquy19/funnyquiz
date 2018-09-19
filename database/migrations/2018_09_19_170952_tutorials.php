@@ -16,6 +16,7 @@ class Tutorials extends Migration
         Schema::create('tutorials', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_tag');
+            $table->string('description');
             $table->mediumText('title');
             $table->string('image');
             $table->json('list_comments');
