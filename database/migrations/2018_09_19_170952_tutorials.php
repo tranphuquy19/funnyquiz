@@ -19,8 +19,8 @@ class Tutorials extends Migration
             $table->string('description');
             $table->mediumText('title');
             $table->string('image');
-            $table->json('list_comments');
-            $table->dateTime('create_at');
+            $table->json('list_comment')->nullable();
+            $table->dateTime('date_create');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class Tutorials extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tutorials');
     }
 }

@@ -21,10 +21,10 @@ class Quiz extends Migration
             $table->mediumText('description');
             $table->json('list_comments');
             $table->string('author');
-            $table->dateTime('created_at');
+            $table->dateTime('date_created');
 
-            $table->foreign('id_tag')->references('id')->on('tags');
-            $table->foreign('author')->references('id')->on('users');
+            //$table->foreign('id_tag')->references('id')->on('tags');
+            //$table->foreign('author')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -36,6 +36,6 @@ class Quiz extends Migration
      */
     public function down()
     {
-       
+       Schema::dropIfExists('quiz');
     }
 }

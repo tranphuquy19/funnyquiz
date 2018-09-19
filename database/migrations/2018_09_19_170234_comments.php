@@ -16,7 +16,7 @@ class Comments extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_user');
-            $table->dateTime('create_at');
+            $table->dateTime('date_create');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class Comments extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('comments');
     }
 }

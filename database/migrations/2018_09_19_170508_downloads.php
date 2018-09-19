@@ -21,7 +21,7 @@ class Downloads extends Migration
             $table->integer('id_tag');
             $table->string('image');
             $table->json('list_comments');
-            $table->dateTime('create_at');
+            $table->dateTime('date_create');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class Downloads extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('downloads');
     }
 }
