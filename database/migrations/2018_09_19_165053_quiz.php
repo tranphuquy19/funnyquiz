@@ -23,8 +23,7 @@ class Quiz extends Migration
             $table->string('author');
             $table->dateTime('date_created');
 
-            //$table->foreign('id_tag')->references('id')->on('tags');
-            //$table->foreign('author')->references('id')->on('users');
+            
             $table->timestamps();
         });
     }
