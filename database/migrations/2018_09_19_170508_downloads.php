@@ -18,7 +18,7 @@ class Downloads extends Migration
             $table->mediumText('title');
             $table->string('description');
             $table->string('link_file');
-            $table->integer('id_tag');
+            //$table->integer('id_tag');
             $table->string('image');
             $table->json('list_comments');
             $table->dateTime('date_create');
