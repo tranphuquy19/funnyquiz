@@ -14,8 +14,8 @@ class Foreignkey extends Migration
     public function up()
     {
         Schema::table('quiz', function (Blueprint $table) {
-            $table->integer('id_tag')->unsigned();
-            $table->string('author')->unsigned();
+            $table->unsignedInteger('id_tag');
+            $table->integer('author')->unsigned();
 
             $table->foreign('id_tag')->references('id')->on('tags');
             $table->foreign('author')->references('id')->on('users');
