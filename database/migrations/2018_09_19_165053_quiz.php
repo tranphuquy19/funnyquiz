@@ -16,14 +16,9 @@ class Quiz extends Migration
         Schema::create('quiz', function (Blueprint $table) {
             $table->increments('id');
             $table->mediumText('title');
-            //$table->integer('id_tag');
             $table->string('image');
             $table->mediumText('description');
-            $table->json('list_comments');
-            //$table->string('author');
-            $table->dateTime('date_created');
-
-            
+            $table->json('list_comments')->nullable();
             $table->timestamps();
         });
     }

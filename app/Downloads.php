@@ -11,7 +11,7 @@ class Downloads extends Model
     public function id_tag(){
         return $this->belongsTo('App\Tags', 'id_tag', 'id');
     }
-    public function id_author(){
-        return $this->belongsTo('App\Users', 'id_author', 'id');
+    public function author(){
+        return $this->belongsTo('App\Users', 'author', 'id');
     }
 }
