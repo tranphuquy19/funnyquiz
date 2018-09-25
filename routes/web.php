@@ -29,3 +29,6 @@ Route::get('/abc',function(){
 Route::get('/abcd',function(){
 	echo 'a_h_i_h_i';
 });
+Route::get('/abcdef',function(){
+	echo 'a_h_i_h_i';
+});
