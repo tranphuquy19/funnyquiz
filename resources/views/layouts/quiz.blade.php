@@ -9,7 +9,7 @@
   <div class="post-info">
     <div class="post-basic-info">
       <h3><a href="quiz?quiz={{$quiz['id']}}">{{$quiz['title']}}</a></h3>
-      <span><a href="?tag={{$quiz['tag']}}"><label> </label>{{$quiz['tag']}}</a></span>
+      <span><a href="tag?tag={{$quiz['tag']}}"><label> </label>{{$quiz['tag']}}</a></span>
       <p>{{$quiz['description']}}</p>
     </div>
     <div class="post-info-rate-share">
