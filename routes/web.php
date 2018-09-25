@@ -26,3 +26,6 @@ Route::get('/logout', 'HomeController@index');
 Route::get('/abc',function(){
 	echo 'a_h_i_h_i';
 });
+Route::get('/abcd',function(){
+	echo 'a_h_i_h_i';
+});
