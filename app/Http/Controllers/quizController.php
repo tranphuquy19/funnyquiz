@@ -9,26 +9,31 @@ use App\Tags;
 
 class quizController extends Controller
 {
-	private $tableQuiz, $count, $stringAlert;
+	private $tableQuiz, $count, $stringAlert, $id;
 	function __construct (){
 		$this->tableQuiz = quizController::getArrayToView();
 		$this->count = quizController::getCount();
 		$this->stringAlert = 'Hiện tại có '.$this->count.' bài trắc nghiệm!';
 	}
-	public function showQuizid(Request $idQuiz){
+	public function showMenuQuiz(Request $request){
+		$this->id = $request->input('id');
+		if(isset($this->id)) quizController::showQuizid();
+		else{
+			$title = 'Quiz';
+			$tableQuiz = $this->tableQuiz;
+			$stringAlert = $this->stringAlert;
+			return view('layouts.grid', compact('tableQuiz', 'title', 'stringAlert'));
+		}
 		
 	}
-	public function showMenuQuiz(){
-		$title = 'Quiz';
-		$tableQuiz = $this->tableQuiz;
-		$stringAlert = $this->stringAlert;
-		return view('layouts.quiz', compact('tableQuiz', 'title', 'stringAlert'));
+	public function showQuizid(){
+		return view('layouts.quiz');
 	}
 	
 	public function showQuiz(){
 		$title = 'Home';
 		$tableQuiz = $this->tableQuiz;
-		return view('layouts.quiz', compact('tableQuiz', 'title'));
+		return view('layouts.grid', compact('tableQuiz', 'title'));
 	}
 
 	public static function getCount(){
