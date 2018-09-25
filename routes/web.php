@@ -24,5 +24,5 @@ Route::get('/quiz/{idQuiz}', 'quizController@showQuizid');
 Route::get('/quiz', 'quizController@showMenuQuiz');
 Route::get('/logout', 'HomeController@index');
 Route::get('/abc',function(){
-	echo 'ahiah   i';
+	echo 'a_h_i_h_i';
 });
