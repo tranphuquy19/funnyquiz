@@ -46,7 +46,7 @@
     <div class="header">
       <div class="wrap">
         <div class="logo">
-          <a href="index.html"><img src="images/logo.png" title="Funny Quiz" /></a>
+          <a href="/"><img src="images/logo.png" title="Funny Quiz" /></a>
         </div>
         <div class="nav-icon">
          <a href="#" class="right_bt" id="activator"><span> </span> </a>
@@ -91,8 +91,10 @@
     <div class="wrap">
      <div id="main" role="main">
       <ul id="tiles">
+        
+        <div class= "col-md-12">@yield('info')</div>
         <!-- These are our grid blocks -->
-        @yield('quiz')
+        <div class= "col-md-12">@yield('quiz')</div>
         <!-- End of grid blocks -->
       </ul>
     </div>

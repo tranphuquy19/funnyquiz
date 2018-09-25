@@ -1,6 +1,13 @@
 <!--Layout Quiz hiển thị ngay trong trang chủ-->
 @extends('master')
 @section('title', "Funny Quiz-".$title)
+@section('info')
+@if(isset($stringAlert))
+  <div class= "alert alert-info">
+  <strong>{{$stringAlert}}</strong>
+  </div>
+@endif
+@endsection
 @section('quiz')
 @foreach($tableQuiz as $quiz)
 @if($loop->first) <!--Thẻ list fist & end cần phải giống nhau!-->
